@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Marlon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-tareas">
+        <div class="encabezado-tareas">
+            <h1>Gestor de Tareas</h1>
+            <div class="user-info">
+                <span id="userName">Usuario</span>
+                <button id="btnLogout" class="logout-btn">Cerrar sesión</button>
+            </div>
+        </div>
+        <div class="pestañas-tareas">
+            <button class="pestaña-tarea activa" id="tab-pendientes" type="button">Pendientes</button>
+            <button class="pestaña-tarea" id="tab-completadas" type="button">Completadas</button>
+        </div>
+        <form class="entrada-tarea" id="formularioTarea" autocomplete="off">
+            <input type="text" id="entradaTarea" placeholder="Añade una nueva tarea..." required>
+            <input type="date" id="entradaFecha" required>
+            <input type="time" id="entradaHora" required>
+            <button type="submit" title="Añadir tarea">+</button>
+        </form>
+
+        <ul class="lista-tareas" id="listaTareas">
+        </ul>
+
+        <div class="categorias-tareas">
+            <div class="categoria">
+                <strong id="totalTareas">0</strong>
+                <p>Total Tareas</p>
+            </div>
+            <div class="categoria">
+                <strong id="tareasCompletadas">0</strong>
+                <p>Completadas</p>
+            </div>
+            <div class="categoria">
+                <strong id="tareasPendientes">0</strong>
+                <p>Pendientes</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

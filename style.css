@@ -1,0 +1,197 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e5deff 0%, #f2fce2 100%);
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contenedor-tareas {
+    background: #fff;
+    width: 100%;
+    max-width: 465px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(155,135,245,0.08), 0 1.5px 8px rgba(64,62,67,.08);
+    overflow: hidden;
+}
+.encabezado-tareas {
+    background: linear-gradient(90deg, #9b87f5 0%, #7E69AB 100%);
+    color: #fff;
+    padding: 22px 18px 18px 18px;
+    text-align: center;
+    box-shadow: 0 2px 16px #9b87f52b;
+    position: relative;
+}
+.encabezado-tareas h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    gap: 15px;
+}
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.pestañas-tareas {
+    display: flex;
+    border-bottom: 1px solid #efe8fa;
+    background: #faf8ff;
+}
+.pestaña-tarea {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    color: #7E69AB;
+    font-weight: 500;
+    font-size: 1.08rem;
+    border: none;
+    background: none;
+    transition: background 0.2s, color 0.2s;
+}
+.pestaña-tarea.activa {
+    background: #e5deff;
+    color: #9b87f5;
+    border-bottom: 3px solid #9b87f5;
+}
+.entrada-tarea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #f9f9fa;
+    padding: 16px 18px;
+    border-bottom: 1px solid #eee;
+}
+.entrada-tarea input[type="text"] {
+    flex: 2;
+    min-width: 200px;
+    padding: 10px 14px;
+    border: 1.5px solid #d6bcfa;
+    border-radius: 6px;
+    background: #f8f7ff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.entrada-tarea input[type="date"],
+.entrada-tarea input[type="time"] {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 8px;
+    border: 1.5px solid #e5deff;
+    border-radius: 6px;
+    background: #f4f4fb;
+    font-size: .99rem;
+    color: #674db2;
+    outline: none;
+}
+.entrada-tarea button {
+    background: linear-gradient(90deg,#9b87f5 50%,#7E69AB 100%);
+    border: none;
+    color: #fff;
+    font-size: 1.17rem;
+    padding: 0 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #9b87f520;
+    transition: background .18s, box-shadow .18s;
+}
+.entrada-tarea button:hover {
+    background: #8B5CF6;
+    box-shadow: 0 0 12px #7e69ab44;
+}
+.lista-tareas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+.item-tarea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    font-size: 1rem;
+    border-bottom: 1px solid #f3f1fb;
+    transition: background 0.17s;
+    min-height: 56px;
+}
+.item-tarea:last-child {
+    border-bottom: none;
+}
+.item-tarea.completada span,
+.item-tarea.completada small {
+    text-decoration: line-through;
+    color: #c4b7e3;
+}
+.item-tarea input[type="checkbox"] {
+    accent-color: #9b87f5;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+.item-tarea .info-tarea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.item-tarea .fecha-tarea {
+    font-size: .89em;
+    color: #8a898c;
+    margin-top: 2px;
+}
+.boton-eliminar {
+    background: #ea384c;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .95em;
+    margin-left: 14px;
+    transition: background .15s;
+}
+.boton-eliminar:hover {
+    background: #c53030;
+}
+.categorias-tareas {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 14px 18px 12px 18px;
+    background: #faf8ff;
+    border-top: 1px solid #eee;
+}
+.categoria {
+    background: #e5deff;
+    padding: 12px 0;
+    min-width: 88px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1.5px 7px #8e919650;
+    font-size: .97rem;
+}
+.categoria strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #7E69AB;
+    margin-bottom: 2px;
+}

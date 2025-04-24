@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e5deff 0%, #f2fce2 100%);
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-autenticacion {
+    width: 100%;
+    max-width: 420px;
+}
+
+.tarjeta-autenticacion {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(155,135,245,0.08), 0 1.5px 8px rgba(64,62,67,.08);
+    overflow: hidden;
+}
+
+.cabecera-autenticacion {
+    background: linear-gradient(90deg, #9b87f5 0%, #7E69AB 100%);
+    color: #fff;
+    padding: 28px 0;
+    text-align: center;
+    box-shadow: 0 2px 16px #9b87f52b;
+}
+
+.cabecera-autenticacion h1 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.cabecera-autenticacion p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.05rem;
+}
+
+.pestanas-autenticacion {
+    display: flex;
+    border-bottom: 1px solid #efe8fa;
+    background: #faf8ff;
+}
+
+.pestana-autenticacion {
+    flex: 1;
+    padding: 15px 12px;
+    text-align: center;
+    cursor: pointer;
+    color: #7E69AB;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: none;
+    background: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pestana-autenticacion.activa {
+    background: #e5deff;
+    color: #9b87f5;
+    border-bottom: 3px solid #9b87f5;
+}
+
+.formulario-autenticacion {
+    padding: 24px;
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #d6bcfa;
+    border-radius: 8px;
+    background: #f8f7ff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.grupo-formulario input:focus {
+    border-color: #9b87f5;
+    box-shadow: 0 0 0 2px rgba(155,135,245,.2);
+}
+
+.accion-formulario {
+    margin-top: 28px;
+}
+
+.boton-autenticacion {
+    background: linear-gradient(90deg, #9b87f5 0%, #7E69AB 100%);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 8px #9b87f520;
+    transition: background 0.18s, box-shadow 0.18s;
+}
+
+.boton-autenticacion:hover {
+    background: #8B5CF6;
+    box-shadow: 0 0 12px #7e69ab44;
+}
+
+.mensaje-autenticacion {
+    margin-top: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.mensaje-autenticacion.error {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+.mensaje-autenticacion.exito {
+    background-color: #dcfce7;
+    color: #16a34a;
+}

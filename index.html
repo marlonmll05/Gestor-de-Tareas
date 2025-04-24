@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Marlon - Acceso</title>
+    <link rel="stylesheet" href="auth-style.css">
+</head>
+<body>
+    <div class="contenedor-autenticacion">
+        <div class="tarjeta-autenticacion">
+            <div class="cabecera-autenticacion">
+                <h1>Gestor de Tareas</h1>
+                <p>Inicia sesión o regístrate para continuar</p>
+            </div>
+            
+            <div class="pestanas-autenticacion">
+                <button class="pestana-autenticacion activa" id="pestana-iniciosesion" type="button">Iniciar Sesión</button>
+                <button class="pestana-autenticacion" id="pestana-registro" type="button">Registrarse</button>
+            </div>
+            
+            <form id="formulario-iniciosesion" class="formulario-autenticacion">
+                <div class="grupo-formulario">
+                    <label for="iniciosesion-correo">Correo electrónico</label>
+                    <input type="email" id="iniciosesion-correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="iniciosesion-contrasena">Contraseña</label>
+                    <input type="password" id="iniciosesion-contrasena" placeholder="Tu contraseña" required>
+                </div>
+                <div class="accion-formulario">
+                    <button type="submit" class="boton-autenticacion">Iniciar Sesión</button>
+                </div>
+                <div class="mensaje-autenticacion" id="mensaje-iniciosesion"></div>
+            </form>
+            
+            <form id="formulario-registro" class="formulario-autenticacion" style="display:none">
+                <div class="grupo-formulario">
+                    <label for="registro-nombre">Nombre completo</label>
+                    <input type="text" id="registro-nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="registro-correo">Correo electrónico</label>
+                    <input type="email" id="registro-correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="registro-contrasena">Contraseña</label>
+                    <input type="password" id="registro-contrasena" placeholder="Crea una contraseña" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="registro-confirmar-contrasena">Confirmar contraseña</label>
+                    <input type="password" id="registro-confirmar-contrasena" placeholder="Repite la contraseña" required>
+                </div>
+                <div class="accion-formulario">
+                    <button type="submit" class="boton-autenticacion">Registrarse</button>
+                </div>
+                <div class="mensaje-autenticacion" id="mensaje-registro"></div>
+            </form>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>
